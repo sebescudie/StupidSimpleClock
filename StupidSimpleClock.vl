@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="CJgjSXpENOcQFEKmG6VlG2" LanguageVersion="2025.7.2-0019-gdb3078835f" Version="0.128">
+  <NugetDependency Id="CR5S2JHRviIOLJSIX93GbO" Location="VL.CoreLib" Version="2025.7.2-0019-gdb3078835f" />
+  <Patch Id="Q02Rj0pHaPgNoISpvKiywb">
+    <Canvas Id="Q6cjNFvKQaCNjNHD4M7ihU" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Efehq41XmhYNfCIfmSjkp3">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="CSx8Kl1mf0yMrx6w3jljWE">
+        <Canvas Id="SQVBuHvdYwhP7FBjmmZaKh" CanvasType="Group">
+          <Pad Id="DMagggMpCoRO2j0V2eyn4y" Bounds="56,100,237,101" ShowValueBox="true" isIOBox="true" Value="This app just displays the current time in a Skia window. The main purpose is to test how Velopack's auto-update and auto-installer features work with vvvv patches.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="195,291,36,19" Id="I59GQyKax9yQEq8RJBQR12">
+            <p:NodeReference LastCategoryFullName="System.DateTime" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="DateTime" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Now" />
+            </p:NodeReference>
+            <Pin Id="BZpCJAZbjPbL7P1sa6iMbL" Name="Now" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="152,350,48,19" Id="BW5jSVrlDeSOjRZrIPpVGR">
+            <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Format" />
+            </p:NodeReference>
+            <Pin Id="Ep0xmCk8I1uNsRNZa7ED7e" Name="Format" Kind="InputPin" DefaultValue="Right now it's {0}" />
+            <Pin Id="Mdp4KjqkdycPYNbgO7TWXC" Name="Input" Kind="InputPin" />
+            <Pin Id="MRGqAuRciqpPsd6swp2dEI" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="92,450,145,19" Id="Qg4XRTmAmQWOajl2VchyR0">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="SDv7LzQ6o8QOuUU3EbEZJg" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="NZpi5rn1A8WPXP21TcBX35" Name="Bounds" Kind="InputPin" DefaultValue="1647, 491, 615, 437" IsHidden="true" />
+            <Pin Id="EbSSMjKgafdOYYZRvydQ5r" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VyFxUH1ucBUN8hg6QbLGk1" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="AtXtaNfR8z9Ors1BVNrCzB" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="ExLzOSaeVzkO6wVQgbObU3" Name="Always On Top" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UbNIAYCt30bM2t4thdYDAk" Name="Extend Into Title Bar" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KcDg98EtbiHMCpsHqDM824" Name="Input" Kind="InputPin" />
+            <Pin Id="HccZEBV5TtqQdAGUCe50r7" Name="Title" Kind="InputPin" />
+            <Pin Id="DO7cR2lTm7oMvsxmIWpP2j" Name="Title Bar Interaction Width" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PPdIVayG3ezLGwwyvwGz9I" Name="Color" Kind="InputPin" />
+            <Pin Id="GQN1bLfR1ZeOmPGKtC77uj" Name="Clear" Kind="InputPin" />
+            <Pin Id="My6dvU8xi9AMHtJQhsJRLZ" Name="Space" Kind="InputPin" />
+            <Pin Id="BgPw3UcYvqmLbFWdtLlinq" Name="Show Cursor" Kind="InputPin" />
+            <Pin Id="Q0hl2Spl07APwqjByUEy1j" Name="VSync" Kind="InputPin" />
+            <Pin Id="TcBxB3a7qlFNbbmIpb7MAG" Name="Commands" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JPwXYww9plWNqXSvsmOTs8" Name="Enable Keyboard Shortcuts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LCKa7k0HinMLsrSPtak6vp" Name="Enabled" Kind="InputPin" />
+            <Pin Id="KPO9ig9yDMZNw2rMAOcOlZ" Name="Form Bounds Notifications" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="IBbqB7GA72HOvJlFyDCy5i" Name="Form" Kind="OutputPin" />
+            <Pin Id="OAiydKLxXgBMEc4hy4cGtA" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="JCr7DHrLbVKLkrDk6hFiXe" Name="Render Time" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="92,390,105,19" Id="PRMjiMHkzsDO8XpCwayI55">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers.Text" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Text" />
+            </p:NodeReference>
+            <Pin Id="JJksihgz5OyL6S0irtENTZ" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Gk3dIuu07BlMTPHa5e7rnZ" Name="Position" Kind="InputPin" />
+            <Pin Id="K1RyBQm2cUJNnMcfHNkm5W" Name="Size" Kind="InputPin" />
+            <Pin Id="VVO9KHGKc8gLUtik1BxIWy" Name="Anchor" Kind="InputPin" />
+            <Pin Id="Ewuv8M2npe3LCDiw5Y7HnT" Name="Text" Kind="InputPin" />
+            <Pin Id="IH95jZ5iVBTPB8P9d1vu2w" Name="Paint" Kind="InputPin" />
+            <Pin Id="I2LIWtYHUDcLl9Yxa1RURf" Name="Enabled" Kind="InputPin" />
+            <Pin Id="A5pZsig8HT4PEV2N76Jd91" Name="Output" Kind="OutputPin" />
+            <Pin Id="OQfP90cLOFxOXX68vj6RwT" Name="Baseline Position" Kind="OutputPin" />
+          </Node>
+          <Pad Id="InMQTSd1ldMNROcYiO28tH" Bounds="400,275,441,213" ShowValueBox="true" isIOBox="true" Value="Steps :&#xD;&#xA;- Reference the Velopack nuget&#xD;&#xA;- Create an IStartup calling VelopackApp.Build().Run(); in Configure&#xD;&#xA;- Add PublishSingleFile to .props&#xD;&#xA;- Install vpk (dotnet tool install -g vpk)&#xD;&#xA;- Build the app using vvvv or vvvvc">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <!--
+
+    ************************ Startup ************************
+
+-->
+          <Node Name="Startup" Bounds="487,140" Id="BJUQw7mEvPJPyindsRFrRo">
+            <p:NodeReference>
+              <Choice Kind="ClassDefinition" />
+            </p:NodeReference>
+            <p:Interfaces>
+              <TypeReference LastCategoryFullName="System.Application" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="MutableInterfaceType" Name="IStartup" />
+              </TypeReference>
+            </p:Interfaces>
+            <Patch Id="CmRJkQrB0uxL8zNhTqtZf2">
+              <Canvas Id="LxJHYRIT8lXO79ZajHdqkB" CanvasType="Group">
+                <Node Bounds="462,211,39,19" Id="S28sALbTY6hLFhi1crpXr9">
+                  <p:NodeReference LastCategoryFullName="Velopack.VelopackApp" LastDependency="Velopack.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Velopack" />
+                    <Choice Kind="OperationCallFlag" Name="Build" />
+                  </p:NodeReference>
+                  <Pin Id="MN79IFPOmqoPjVqpmqiMMD" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="462,270,63,26" Id="BIiNOOlc4HDLC0TsaAynHe">
+                  <p:NodeReference LastCategoryFullName="Velopack.VelopackApp" LastDependency="Velopack.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="VelopackApp" />
+                    <Choice Kind="OperationCallFlag" Name="Run" />
+                  </p:NodeReference>
+                  <Pin Id="LgbALIVj8FuMwew8fZUC73" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="CxRaB83j03QNc2OJzuBeEb" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Canvas>
+              <Patch Id="ErmMIEFPLshNnlY1k4Tpo3" Name="Create" />
+              <ProcessDefinition Id="H2JIzaUze0QPLNZIv3jg24" IsHidden="true">
+                <Fragment Id="IgqlYLbdK2cP2hOEsokiTG" Patch="ErmMIEFPLshNnlY1k4Tpo3" Enabled="true" />
+                <Fragment Id="CdYNBTGbFqYMmU084Cn5Dn" Patch="KOnc1uMAFYjOlrLYTAwLX3" />
+              </ProcessDefinition>
+              <Patch Id="KOnc1uMAFYjOlrLYTAwLX3" Name="Configure" ParticipatingElements="S28sALbTY6hLFhi1crpXr9,BIiNOOlc4HDLC0TsaAynHe,EN60ZmKvmABMFUvNzWPlM1">
+                <Pin Id="Qfs1qyRLhFPMgMZMooHP2c" Name="App Host" Kind="InputPin" />
+              </Patch>
+              <Link Id="EN60ZmKvmABMFUvNzWPlM1" Ids="MN79IFPOmqoPjVqpmqiMMD,LgbALIVj8FuMwew8fZUC73" />
+            </Patch>
+          </Node>
+        </Canvas>
+        <Patch Id="FozYbkJix0tMS6xfN6ilgV" Name="Create" />
+        <Patch Id="CNnluiU4d36NTk5E0T3ZhN" Name="Update" />
+        <ProcessDefinition Id="Bli8zk77hsKOxV75bclGxz">
+          <Fragment Id="UE5OugTCHfCQK5x9TuFWEu" Patch="FozYbkJix0tMS6xfN6ilgV" Enabled="true" />
+          <Fragment Id="Hu3o7y0lwk9L3FscucSRlD" Patch="CNnluiU4d36NTk5E0T3ZhN" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="MnGFL2o9gTRONabH0eoJqN" Ids="BZpCJAZbjPbL7P1sa6iMbL,Mdp4KjqkdycPYNbgO7TWXC" />
+        <Link Id="Uvhu0o7R8uNPhmkexItpaO" Ids="MRGqAuRciqpPsd6swp2dEI,Ewuv8M2npe3LCDiw5Y7HnT" />
+        <Link Id="NcH2QH0QnHePxjIF1lniG4" Ids="A5pZsig8HT4PEV2N76Jd91,KcDg98EtbiHMCpsHqDM824" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="TpSuAdUHpVrLPph1PMw2g2" Location="VL.Skia" Version="2025.7.2-0019-gdb3078835f" />
+  <NugetDependency Id="AVmZWsrpnX1NJRoEApcYNz" Location="Velopack" Version="0.0.1298" />
+</Document>
