@@ -146,14 +146,14 @@
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="UpdateManager" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
-                    <PinReference Kind="InputPin" Name="Url Or Path" />
+                    <PinReference Kind="InputPin" Name="Source" />
                   </p:NodeReference>
-                  <Pin Id="PANyJaBBUUQNIN36ocARdb" Name="Url Or Path" Kind="InputPin" />
+                  <Pin Id="CnWDQwyE7oqLEgDM9ZpbpV" Name="Source" Kind="InputPin" />
                   <Pin Id="D3DOLemUQmYOG5kpinJsGK" Name="Options" Kind="InputPin" />
                   <Pin Id="HmGz7B0t6m5QLorkIymhsF" Name="Locator" Kind="InputPin" />
                   <Pin Id="DTuFVDA9XSTM4C9CuQpQnc" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Pad Id="BmT3Os6enrNMs5rVj0b0kX" Comment="Url Or Path" Bounds="130,119,329,15" ShowValueBox="true" isIOBox="true" Value="https://github.com/sebescudie/StupidSimpleClock/releases">
+                <Pad Id="BmT3Os6enrNMs5rVj0b0kX" Comment="Url Or Path" Bounds="130,81,329,15" ShowValueBox="true" isIOBox="true" Value="https://github.com/sebescudie/StupidSimpleClock">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="String" />
                   </p:TypeAnnotation>
@@ -432,21 +432,27 @@
                     </Node>
                   </Patch>
                 </Node>
+                <Node Bounds="128,110,65,26" Id="VVFVNiywrvUL8JDhAr4Zu2">
+                  <p:NodeReference LastCategoryFullName="Velopack.Sources.GithubSource" LastDependency="Velopack.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="GithubSource" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="UREozOvPWnLObkkVqOUMlE" Name="Repo Url" Kind="InputPin" />
+                  <Pin Id="QEO66MzfMcUOFEmhGDA1KI" Name="Access Token" Kind="InputPin" />
+                  <Pin Id="Gijg0o4XD7nMzmBtdzjqIY" Name="Prerelease" Kind="InputPin" />
+                  <Pin Id="VufLJEG1p4YNSHnMwWvpiW" Name="Downloader" Kind="InputPin" />
+                  <Pin Id="BiLujifduhLLGXd2kDs8SC" Name="Output" Kind="StateOutputPin" />
+                </Node>
               </Canvas>
-              <Patch Id="A9E9ZQUecPfNEbrnUpiK6f" Name="Create" ParticipatingElements="OzO9GMWxj3NLxTp74q0XmX,FmPmiVxP35tK91QXGkXU5v,JnfjuwE0VywLnPyZAe59Z0" />
+              <Patch Id="A9E9ZQUecPfNEbrnUpiK6f" Name="Create" ParticipatingElements="OzO9GMWxj3NLxTp74q0XmX,JnfjuwE0VywLnPyZAe59Z0" />
               <Patch Id="PrffKu6qNe5NEF6AMWablo" Name="Update">
                 <Pin Id="MjT8hQYwUTZPHIqa86ezSn" Name="Start" Kind="InputPin" />
               </Patch>
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="APiTKbEqvQcMWnUMc3XyYY">
                 <Fragment Id="D46m8WLvBLhMqOYQaOU9kQ" Patch="A9E9ZQUecPfNEbrnUpiK6f" Enabled="true" />
                 <Fragment Id="JdAW60UtWx4Nqfknggmb7D" Patch="PrffKu6qNe5NEF6AMWablo" Enabled="true" />
               </ProcessDefinition>
-              <Link Id="FmPmiVxP35tK91QXGkXU5v" Ids="BmT3Os6enrNMs5rVj0b0kX,PANyJaBBUUQNIN36ocARdb" />
               <Link Id="C3Dc4DpecKnMYUxhQKcs3h" Ids="TdmW0isywOwOje91E2hNDG,F6rixnG92S3NlOxVRR7kV0" IsHidden="true" />
               <Link Id="E3LIzRljlgeQVX34gkqtFA" Ids="Shw1v1XoNqfN6v6JWnsP43,EdIoNLy8G14O6gVuusGrth" IsHidden="true" />
               <Link Id="OXKDCX84cbyOyu0hbHmqZk" Ids="HNYtd9ewJPBPs4l5s9QXfQ,Shw1v1XoNqfN6v6JWnsP43" />
@@ -492,6 +498,8 @@
               <Link Id="RnS47QmRilyL09GGdiboYj" Ids="V4oWHQEhm0kMiQz3Vf7G8j,HkkMvtDuwbjOGiCiburK8J" />
               <Link Id="TZgIabHOebtPYvaJwsJ73U" Ids="HmPEAaeieJMMqGz64nEAPJ,UoMFurIzV7kNNu95h952Fh" />
               <Link Id="EKZgBmqE0nNOaxh7vYZW1t" Ids="HmPEAaeieJMMqGz64nEAPJ,TSMVCZrHbvgOi312eR4SiO" />
+              <Link Id="NEXSdnrLnk6NQUJXTZyWpW" Ids="BmT3Os6enrNMs5rVj0b0kX,UREozOvPWnLObkkVqOUMlE" />
+              <Link Id="RKFMcL1VZCZLrEdIACEGSs" Ids="BiLujifduhLLGXd2kDs8SC,CnWDQwyE7oqLEgDM9ZpbpV" />
             </Patch>
           </Node>
           <Node Bounds="218,480,65,19" Id="T7gCE99J3zxPJzrsUcchGF">
@@ -614,11 +622,6 @@
                 <Pin Id="SsM8hA1f542PhK4aFYL2SY" Name="Output" Kind="OutputPin" />
                 <Pin Id="UsAMcZKjn22QFRaYBFctwN" Name="Check For Updates" Kind="InputPin" />
               </Patch>
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="GCDSa3AxHhRPfFz6ibgvHk">
                 <Fragment Id="HqfUrFrEipmODfXBBJ9M07" Patch="EGGNJlUSHNvPPpBJhw35SV" Enabled="true" />
                 <Fragment Id="Th4OVhV5UVzQUG6Vm0lDe3" Patch="MvurJOsXKMwN99vsmXMR2i" Enabled="true" />
