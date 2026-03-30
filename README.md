@@ -57,3 +57,5 @@ Mode                LastWriteTime         Length Name
 <p align="center">
 <img src="doc/installer.png" title="" alt="StupidSimpleClock installer">
 </p>
+
+- Published all release artifacts to [Github](https://github.com/sebescudie/StupidSimpleClock/releases)
