@@ -780,11 +780,6 @@
                 <Pin Id="J3qJp3orjkAP36zJOobC4e" Name="Background" Kind="OutputPin" />
                 <Pin Id="TqjNH8IvZVNNJwIzpkEwDJ" Name="Text" Kind="OutputPin" />
               </Patch>
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="PHUnrphLA3ZOSw7bCItmEg">
                 <Fragment Id="BKJYfhfOO1fOo3XyrCrzp6" Patch="VyYxJW6GtZRLNnws7uIsgN" Enabled="true" />
                 <Fragment Id="HKhoU7bA6tkLgNobF01tTn" Patch="N8GAx8Xu6nuPoJ1HwVVHFH" Enabled="true" />
@@ -820,7 +815,7 @@
             <Pin Id="G9azMGsqdbbPtnrriLs5L0" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="Huf39PXY7siM7aWtlSDRMS" Name="Input" Kind="InputPin" />
             <Pin Id="N9XdU9AmiAKLX8NQM9qxpg" Name="Family Name" Kind="InputPin" />
-            <Pin Id="UlpN1a8HU1fLz5mh2JdcLH" Name="Style" Kind="InputPin" />
+            <Pin Id="UlpN1a8HU1fLz5mh2JdcLH" Name="Style" Kind="InputPin" DefaultValue="BoldItalic" />
             <Pin Id="FZEyu3eWLJWNgNwTCrdjpd" Name="Size" Kind="InputPin" />
             <Pin Id="NiPhyCUVRfxPnAvunOE5Ji" Name="Color" Kind="InputPin" />
             <Pin Id="VGGbL9mZP5COTm91TEPTz6" Name="Line Height in em" Kind="InputPin" />
